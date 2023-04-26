@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Kanit:wght@400&display=swap" rel="stylesheet">
+<title>Document</title>
+    <style>
+        body{
+            width: 100%;
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            
+        }
+        .navbar{
+            background-color: white;
+            width: 100%;
+        }
+        .navbar img{
+            width: 200px;
+            margin: 15px auto 0px 40px;
+        }
+
+        .content{
+            background-color: rgba(240, 240, 240, 0.995);
+            height: 800px;
+            
+        }
+
+        .content .head{
+           display: flex;
+           justify-content: center;
+           align-items: center;
+           margin: 10px;
+           
+        }
+
+        .head img{
+            width: 75px;
+            margin: 0 10px;
+        }
+
+        .head h1{
+            font-weight: 100px;
+            font-size: 40px;
+            font-family: 'Kanit', sans-serif;
+            color: #000080;
+        }
+
+        .product{
+            width: 250px;
+            margin: 0 auto;
+            height: 400px;
+            border-radius: 12px;
+            overflow: hidden;
+            background-color: white;
+        }
+
+
+        .img-product img{
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+        }
+
+        .name p{
+            font-family: 'Kanit', sans-serif;
+            margin: 5px 10px;
+        }
+
+        .price{
+            color: rgb(239, 72, 34);
+            font-size: 25px;
+            font-weight: bold;
+            margin-top: -3px;
+            margin-left: 10px;
+        }
+
+        .discount{
+            display: flex;
+            margin-top: -45px;
+            font-size: 20px;
+            align-items: first baseline;
+        }
+
+        .price-discount{
+            margin-right: 5px;
+            color: gray;
+            margin-left: 10px;
+            text-decoration: line-through;
+        }
+
+        .box{
+           display: grid;
+           grid-template-columns: repeat(6, 1fr);
+           grid-gap: 1rem;
+           margin: auto 40px;
+        }
+
+    
+
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4d/Lazada_%282019%29.svg/1454px-Lazada_%282019%29.svg.png" alt="">
+    </div>
+
+    <div class="content">
+        <div class="head">
+            <img src="https://www.citypng.com/public/uploads/small/11662642224ojyv8sucopj8ibqfb20zp38ty22mhy1wosgdkzvwgqnp36jzjyhnkj8cffaabfpr5t5kb6c0uhscpehczxvg4xyw1o3fhugbddqx.png" alt="">
+            <h1>Just For You</h1>
+            <img src="https://www.citypng.com/public/uploads/small/11662642224ojyv8sucopj8ibqfb20zp38ty22mhy1wosgdkzvwgqnp36jzjyhnkj8cffaabfpr5t5kb6c0uhscpehczxvg4xyw1o3fhugbddqx.png" alt="">
+
+        </div>
+
+        <div class="box">
+            <div class="product">
+                <div class="img-product">
+                    <img src="https://lzd-img-global.slatic.net/g/p/0ee0de055855d199d7d5833da4fb548a.jpg_400x400q80.jpg_.webp" alt="">
+                </div>
+                <div class="name">
+                    <p>
+                        ปิ่นปักผมเกาหลีเครื่องประดับที่แบ่งผมสำหรับเด็กผู้หญิง
+                    </p>
+                </div>
+                
+                <p class="price">฿50.00</p>
+              
+                <div class="discount">
+                    
+                    <p class="price-discount" >฿100.00</p>
+                    <p class="percen-discount">-66%</p>
+                    
+                </div>
+    
+            </div>
+
+            <div class="product">
+                <div class="img-product">
+                    <img src="https://lzd-img-global.slatic.net/g/p/0007c8d06c602aa5e5949386ed045b4f.jpg_400x400q80.jpg_.webp" alt="">
+                </div>
+                <div class="name">
+                    <p>
+                        imoda เทปกาวสำหรับตกแต่งสมุดติดไดอารี่ 5 ม้วน/กล่อง
+                    </p>
+                </div>
+                
+                <p class="price">฿20.38</p>
+              
+                <div class="discount">
+                    
+                    <p class="price-discount" >฿35.00</p>
+                    <p class="percen-discount">-42%</p>
+                    
+                </div>
+    
+            </div>
+
+            <div class="product">
+                <div class="img-product">
+                    <img src="https://lzd-img-global.slatic.net/g/p/4b58cb64a918c35c61924a44102f4d84.jpg_2200x2200q80.jpg_.webp" alt="">
+                </div>
+                <div class="name">
+                    <p>
+                        สมุดโน๊ตจิ๋ว สุ่มลาย สมุดจิ๋ว มีเส้น สมุดจดบันทึก 
+                        
+                    </p>
+                </div>
+                
+                <p class="price"> ฿119.00</p>
+              
+                <div class="discount">
+                    
+                    <p class="price-discount" >฿10.00</p>
+                    <p class="percen-discount">-15%</p>
+                    
+                </div>
+    
+            </div>
+
+            <div class="product">
+                <div class="img-product">
+                    <img src="https://lzd-img-global.slatic.net/g/p/2fa6053c66f48afdd84317ff51e35376.jpg_400x400q80.jpg_.webp" alt="">
+                </div>
+                <div class="name">
+                    <p>
+                        กางเกงขาสั้นทรงสปอร์ต สายฝอ สไตล์เกาหลี
+                    </p>
+                </div>
+                
+                <p class="price">฿22.00</p>
+              
+                <div class="discount">
+                    
+                    <p class="price-discount" >฿99.00</p>
+                    <p class="percen-discount">-33%</p>
+                    
+                </div>
+    
+            </div>
+
+            <div class="product">
+                <div class="img-product">
+                    <img src="https://lzd-img-global.slatic.net/g/p/fd8ef9441c85591283187206af164ff5.jpg_400x400q80.jpg_.webp" alt="">
+                </div>
+                <div class="name">
+                    <p>
+                        สมุดโน้ต สมุดโน๊ต ลายการ์ตูน สมุดจดบันทึก NOTEBOOK 
+                    </p>
+                </div>
+                
+                <p class="price">฿20.00</p>
+              
+                <div class="discount">
+                    
+                    <p class="price-discount" >฿100.00</p>
+                    <p class="percen-discount">-66%</p>
+                    
+                </div>
+    
+            </div>
+
+            <div class="product">
+                <div class="img-product">
+                    <img src="https://lzd-img-global.slatic.net/g/p/bfe1f2c116ac6d868d6ec8c26a45a473.jpg_400x400q75.jpg_.webp" alt="">
+                </div>
+                <div class="name">
+                    <p>
+                        Marquise1997 รองเท้าหัวโตผญ รองเท้าแตะ
+                    </p>
+                </div>
+                
+                <p class="price">฿53.76</p>
+              
+                <div class="discount">
+                    
+                    <p class="price-discount" >฿109.00</p>
+                    <p class="percen-discount">51%</p>
+                    
+                </div>
+    
+            </div>
+        </div>
+
+       
+        
+    </div>
+</body>
+</html>

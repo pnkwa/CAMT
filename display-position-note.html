@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Document</title>
+    <style>
+        body{
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            margin: 0 auto;
+        }
+        
+        .box , h1 , h2 , h3{
+            width: 800px;
+            position: relative;
+            left: 50%;
+            transform: translateX(-50%);
+            padding: 10px;
+        }
+        .box{
+            border: dashed 2px grey;
+            background: rgb(255, 246, 235);
+            width: 800px;
+        }
+        
+
+    
+
+    </style>
+</head>
+<body>
+    <h1>Box Model</h1>
+        <div class="box">
+
+            <div class="model">
+                <p>Simple Box</p>
+                
+            </div>
+    
+            <style>
+                .model{
+                    position: relative;
+                    background-color: #F7DBF0; 
+                    margin: 30px;
+                    border: solid 20px #BEAEE2;
+                }
+    
+                .model p{
+                    position: relative;
+                    background-color: #CDF0EA;
+                    margin: 20px;
+                    border: solid 20px #F9F9F9;
+                    width: 620px;
+                }
+                
+            </style>
+    
+        </div>
+    
+    
+
+    <h1>CSS Display</h1>
+    <h2>Inline</h2>
+    
+    <div class="box">
+        <div class="inline" style="padding: 20px;">
+            <p style="background-color: #BEAEE2;">Inline text1</p>
+            <p style="background-color: #F7DBF0">Inline text2</p>
+            <p style="background-color: #CDF0EA;">Inline text3</p>
+            <p style="background-color: #F9F9F9;">Inline text4</p>
+            <p style="background-color: #E4D0D0;">Inline text5</p>
+        </div>
+
+        <style>
+            
+            .inline p{
+                display: inline;
+                color: #515151;
+                margin-right: -10px;
+            }
+
+        
+        </style>
+        
+    </div>
+
+    <h2>Block</h2>
+    <div class="box">
+        <div class="block" style="padding: 20px;">
+            <p style="background-color: #BEAEE2;">Block text1</p>
+            <p style="background-color: #F7DBF0;">Block text2</p>
+            <p style="background-color: #CDF0EA;">Block text3</p>
+            <p style="background-color: #F9F9F9;">Block text4</p>
+            <p style="background-color: #E4D0D0;">Block text5</p>
+        </div>
+
+        <style>
+            .block p{
+                display: block;
+                color: #515151;
+                margin: 0;
+            }
+            
+        </style>
+    </div>
+
+    <h2>Inline-block</h2>
+    <div class="box" >
+        <div class="inblock" style="padding: 20px;">
+            <p>apple</p>
+            <p>orange</p>
+            <p>mango</p>
+            <p>watermalon</p>
+        </div>
+
+        <style>
+            .inblock p{
+                display: inline-block;
+            }
+        </style>
+    </div>
+
+    <h2>None</h2>
+    <div class="box">
+        <div class="none" style="padding: 20px;">
+            <p>apple</p>
+            <p>orange</p>
+            <p>mango</p>
+            <p style="display: none;">watermalon</p>
+        </div>
+
+        <style>
+            .none p{
+                display: inline-block;
+            }
+        </style>
+    </div>
+
+    <h2>Display:none vs Visibility:hidden</h2>
+    <div class="box">
+        <div class="hidden" style="padding: 20px;">
+            <p>apple</p>
+            <p style="visibility: hidden;">orange</p>
+            <p>mango</p>
+            <p style="visibility: hidden;">watermalon</p>
+        </div>
+
+        <style>
+            .hidden p{
+                display: inline-block;
+            }
+        </style>
+    </div>
+
+    <h1>CSS Position</h1>
+    <h2>static</h2>
+    <div class="box">
+        <div class="square" 
+        style=
+        "width: 100px;
+        margin: 20px; 
+        height: 100px; 
+        background-color: #BEAEE2; 
+        position: static;"
+        >
+        </div>
+    </div>
+
+    <h2>absolute</h2>
+    <h3>fixed width/height</h3>
+    <div class="box">
+        <div class="square"
+        style=
+        "width: 100px; 
+        padding: 20px;
+        height: 20px; 
+        background-color: #CDF0EA; 
+        position: absolute;"
+        >
+        </div>
+        
+    </div>
+
+    <h3>no width/height</h3>
+    <div class="box">
+        <div class="square" 
+        style=
+        "
+        padding: 10px;
+        background-color: #D5B4B4; 
+        position: absolute;"
+        >
+        </div>
+    </div>
+
+    <h3>fixed width/height + right/top</h3>
+    <div class="box">
+        <div class="square" 
+        style=" width: 800px; 
+        height: 50px; 
+        background-color: #F7DBF0;
+        position: absolute;
+        right: 10px; 
+        top: 20px;
+        "
+        >
+        </div>
+    </div>
+
+    <div class="fix" >
+        <h1
+        style="
+        top: 50%;
+        background-color: #E4D0D0;
+        position: fixed;
+        text-align: center;
+        width: 300px;
+        "
+        >Hello</h1>
+    </div>
+    
+</body>
+</html>
