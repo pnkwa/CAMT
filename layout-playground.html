@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Layout Playground</title>
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>  <style>
+    .playground {
+      padding: 0;
+      margin: 0;
+      border: 1px solid #666;
+      width: 100%;
+      background-color: #EEEEEE;
+      min-height: 300px;
+      position: relative;
+    }
+    .playground > body {
+      margin: 0;
+      padding: 0;
+    }
+  </style>
+</head>
+<body>
+  
+  <h1>Layout with Flexbox</h1>
+  <p>create css classes for building layout/UI</p>
+  <p style="font-weight: bold;">DO NOT CHANGE A HTML STRUCTURE</p>
+  
+  <h2>Vertical Menu</h2>
+  <h3>example</h3>
+  <img src="./images/layouts/vertical-menu.png">
+  <br>
+  <h3>playground</h3>
+  <div class="playground">
+    <style>
+
+    </style>
+
+    <div class="menu-container">
+      <div class="menu-item" style="border-bottom: solid 2px black;">First Menu</div>
+      <div class="menu-item" style="border-bottom: solid 2px black;">Menu 2</div>
+      <div class="menu-item" style="border-bottom: solid 2px black;">Menu 3</div>
+      <div class="menu-item" style="border-bottom: solid 2px black;">Menu 4</div>
+      <div class="menu-item" style="border-bottom: solid 2px black;">Menu 5</div>
+      <div class="menu-item">Last Menu</div>
+    </div>
+
+    <style>
+        .menu-container{
+            border: solid 2px black;
+            width: fit-content;
+            background-color: #bababa;
+        }
+        .menu-item{
+            text-align: center;
+            padding: 5px;
+        }
+    </style>
+  </div>
+
+  <h2>Header</h2>
+  <h3>example</h3>
+  <img src="./images/layouts/header.png">
+  <br>
+  <h3>playground</h3>
+  <div class="playground">
+    <style>
+        .header-container{
+            margin: 20px;
+            padding: 5px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border: solid 2px black;
+            width: 500px;
+            height: 50px;
+        }
+
+    </style>
+
+    <div class="header-container">
+      <div class="header-content-left"><ion-icon name="arrow-back-circle-outline"></ion-icon></div>
+      <div class="header-content">Header</div>
+      <div class="header-content-right"><ion-icon name="calendar-outline"></ion-icon></div>
+    </div>
+  </div>
+
+  <h2>Navigation Tab</h2>
+  <h3>example</h3>
+  <img src="./images/layouts/navigation-tab.png">
+  <br>
+  <h3>playground</h3>
+  <div class="playground">
+    <style>
+        .navigation-container{
+            border: solid 2px black;
+            width: fit-content;
+            display: flex;
+            margin: 5px;
+        }
+
+        .navigation-item{
+            flex-grow: 1;
+            padding: 10px;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .navigation-item-icon{
+            text-align: center;
+        }
+    </style>
+
+    <div class="navigation-container">
+      <div class="navigation-item">
+        <div class="navigation-item-icon"><ion-icon name="arrow-back-circle-outline"></ion-icon></div>
+        <div class="navigation-item-label">
+          First Menu
+        </div>
+      </div>
+      <div class="navigation-item">
+        <div class="navigation-item-icon"><ion-icon name="arrow-back-circle-outline"></ion-icon></div>
+        <div class="navigation-item-label">
+          Second Menu
+        </div>
+      </div>
+      <div class="navigation-item">
+        <div class="navigation-item-icon"><ion-icon name="construct-outline"></ion-icon></div>
+        <div class="navigation-item-label">
+          Third Menu
+        </div>
+      </div>
+      <div class="navigation-item">
+        <div class="navigation-item-icon"><ion-icon name="lock-closed-outline"></ion-icon></div>
+        <div class="navigation-item-label">
+          Fourth Menu
+        </div>
+      </div>
+    </div>
+
+
+  </div>
+
+  <h2>Card</h2>
+  <h3>example</h3>
+  <img src="./images/layouts/card.png">
+  <br>
+  <h3>playground</h3>
+  <div class="playground">
+    <style>
+        .card-list-container{
+            width: 100%;
+            max-height: 100%;
+            display: flex;
+            flex-wrap: wrap;
+            margin: 10px;
+        }
+
+        .card-content-image-section img{
+            width: 200px;
+            height: 200px;
+        }
+
+        .card-content-detail-section{
+            width: 200px;
+            margin: -5px 5px 0 0;
+            background-color: aliceblue;
+            
+        }
+
+        .product-price{
+            text-align: right;
+        }
+
+
+    </style>
+
+    <div>
+      <div class="card-list-container">
+        <div class="card-container">
+          <div class="card-content">
+            <div class="card-content-image-section">
+              <img src="https://1417094351.rsc.cdn77.org/articles/7592/7591612/thumbnail/large.gif?1">
+            </div>
+            <div class="card-content-detail-section">
+              <div class="product-name" style="font-weight: bold;">
+                Elite Obsidian
+              </div>
+              <div class="product-description">
+                Awesome product from Mars made by hand of Ultraman
+              </div>
+              <div class="product-price" style="font-weight: bold;">
+                1,000
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card-container">
+            <div class="card-content">
+              <div class="card-content-image-section">
+                <img src="https://1417094351.rsc.cdn77.org/articles/7592/7591612/thumbnail/large.gif?1">
+              </div>
+              <div class="card-content-detail-section">
+                <div class="product-name" style="font-weight: bold;">
+                  Elite Obsidian
+                </div>
+                <div class="product-description">
+                  Awesome product from Mars made by hand of Ultraman
+                </div>
+                <div class="product-price" style="font-weight: bold;">
+                  1,000
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="card-container">
+            <div class="card-content">
+              <div class="card-content-image-section">
+                <img src="https://1417094351.rsc.cdn77.org/articles/7592/7591612/thumbnail/large.gif?1">
+              </div>
+              <div class="card-content-detail-section">
+                <div class="product-name" style="font-weight: bold;">
+                  Elite Obsidian
+                </div>
+                <div class="product-description">
+                  Awesome product from Mars made by hand of Ultraman
+                </div>
+                <div class="product-price" style="font-weight: bold;">
+                  1,000
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="card-container">
+            <div class="card-content">
+              <div class="card-content-image-section">
+                <img src="https://1417094351.rsc.cdn77.org/articles/7592/7591612/thumbnail/large.gif?1">
+              </div>
+              <div class="card-content-detail-section">
+                <div class="product-name" style="font-weight: bold;">
+                  Elite Obsidian
+                </div>
+                <div class="product-description">
+                  Awesome product from Mars made by hand of Ultraman
+                </div>
+                <div class="product-price" style="font-weight: bold;">
+                  1,000
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="card-container">
+            <div class="card-content">
+              <div class="card-content-image-section">
+                <img src="https://1417094351.rsc.cdn77.org/articles/7592/7591612/thumbnail/large.gif?1">
+              </div>
+              <div class="card-content-detail-section">
+                <div class="product-name" style="font-weight: bold;">
+                  Elite Obsidian
+                </div>
+                <div class="product-description">
+                  Awesome product from Mars made by hand of Ultraman
+                </div>
+                <div class="product-price" style="font-weight: bold;">
+                  1,000
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="card-container">
+            <div class="card-content">
+              <div class="card-content-image-section">
+                <img src="https://1417094351.rsc.cdn77.org/articles/7592/7591612/thumbnail/large.gif?1">
+              </div>
+              <div class="card-content-detail-section">
+                <div class="product-name" style="font-weight: bold;">
+                  Elite Obsidian
+                </div>
+                <div class="product-description">
+                  Awesome product from Mars made by hand of Ultraman
+                </div>
+                <div class="product-price" style="font-weight: bold;">
+                  1,000
+                </div>
+              </div>
+            </div>
+          </div>
+
+      </div>
+      
+    </div>
+  </div>
+
+  <h2>Sidebar</h2>
+  <h3>example</h3>
+  <img src="./images/layouts/sidebar.png">
+  <br>
+  <h3>playground</h3>
+  <div class="playground">
+    <style>
+        .sidebar-container{
+            border: solid 1px;
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+            position: absolute;
+            width: 300px;
+            background-color: pink;
+        }
+
+        .sidebar-menu-section{
+            flex-grow: 1;
+        }
+    </style>
+
+    <div class="sidebar-container">
+      <div class="sidebar-profile-section">
+        <div style="border-bottom: solid 1px black; background-color: white; ">I'm Header</div>
+      </div>
+      <div class="sidebar-menu-section">
+        <div class="sidebar-menu-item"> Menu 1</div>
+        <div class="sidebar-menu-item"> Menu 2</div>
+        <div class="sidebar-menu-item"> Menu 3</div>
+      </div>
+      <div class="sidebar-footer-section">
+        <div style="border-bottom: solid 1px black; background-color: white; ">
+          Logout
+        </div>
+      </div>
+    </div>
+  </div>
+  <br>
+</body>
+</html>
