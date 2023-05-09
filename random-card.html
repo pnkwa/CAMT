@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        body{
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            background-image: url(https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcS7fYHd4EM-AtI3C9keG9AbUGSmgPdi7PMY2V3cX5TLv8N4jdIb);
+        }
+
+        .container{
+            display: flex;
+            flex-grow: 1;
+            flex-wrap: wrap;
+            height: fit-content;
+            background-color: rgb(184, 205, 175);
+            justify-content: center;
+            padding-top: 5%;
+            margin: auto 5%;
+            border: solid 2px;
+            border-radius: 6px;
+        }
+
+        .suits{
+            position: relative;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .card{
+            background-color: white;
+            width: 350px;
+            height: 450px;
+            margin: 10px;
+            border-radius: 6px;
+            border: solid 2px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            
+        }
+
+
+        .type{
+            position: relative;
+            bottom: 30%;
+            left: 30%;
+            font-size: 50px;
+        }
+
+        
+
+        .footer {
+            position: relative;
+            bottom: 0;
+            margin-top: auto;
+            text-align: center; 
+            width: 100%;
+            padding: 20px;
+        }
+
+        button {
+            width: 250px;
+            height: 50px;
+            font-size: 20px;
+            background-color: rgb(61, 100, 30);
+            color: white;
+            border: none;
+            border-radius: 10px;
+            transition: all 0.2s ease;
+        }
+
+        button:hover {
+            transform: scale(1.1);
+            cursor: pointer;
+            background-color: rgb(104, 153, 115);
+        }
+    </style>
+</head>
+<body>
+   
+    <div class="container">
+        <div class="suits">
+            <div class="card">
+                <div class="type" id="type1">
+                </div>
+                <div class="number" id="num1">
+                    random card
+                </div>
+            </div>
+            
+            <div class="card">
+                <div class="type" id="type2">
+                </div>
+                <div class="number" id="num2">
+                    random card
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="type" id="type3">
+                </div>
+                <div class="number" id="num3">
+                    random card
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="type" id="type4">
+                </div>
+                <div class="number" id="num4">
+                    random card
+                </div>
+            </div>
+           
+        </div>
+        
+
+        <div class="footer" onclick="updateCard()">
+            <button>Click to random</button>
+        </div>
+
+    <script>
+        // card number and type
+        var CARD_TYPE = ['♣', '♦', '♥', '♠']
+        var CARD_NUMBER = ['A', '1', '2', '3', '4', '5', '6',' 7', '8', '9', '10', 'J', 'Q', 'K']
+
+        // random function
+        // max: number > 0
+        // return [0, max -1]
+        function random(max) {
+            return parseInt(Math.random() * max) % max
+        }
+
+        // how to use random function
+        
+        function updateCard(){
+            var cards = document.getElementsByClassName('card');
+
+            for(var i = 1; i<=4; i++){
+                var cardType = CARD_TYPE[random(CARD_TYPE.length)]
+                var cardNumber = CARD_NUMBER[random(CARD_NUMBER.length)]
+                console.log(cardType, cardNumber)
+
+                var displayType = document.getElementById('type'+i)
+                displayType.innerText = cardType
+
+                var displayNum = document.getElementById('num'+i)
+                displayNum.innerText = cardNumber
+
+                displayNum.style.fontSize = "60px"
+
+
+                if (cardType == '♦' || cardType == '♥') {
+                    cards[i - 1].style.borderColor = "red"
+                    cards[i - 1].style.color = "red"
+                } else {
+                    cards[i - 1].style.borderColor = "black"
+                    cards[i - 1].style.color = "black"
+                }
+            }
+        }
+
+    </script>
+
+
+    
+</body>
+</html>
